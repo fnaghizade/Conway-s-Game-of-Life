@@ -73,11 +73,24 @@ void world::print()
     }
     cout <<"**************************************************" << endl;
 }
-void world::readFromFile(string filename) {
+world * world::readFromFile(string filename) {
     string l;
     ifstream MyReadFile(filename);
     int W = 0;
+    world *nw;
+    vector<string> v;
     while (getline (MyReadFile, l)) {
-        W = l.size();
+        v.push_back(l);
     }
+    nw = new world(v.size(), v[0].size());
+    for(int i = 0; i < v.size(); i++) {
+        for(int j = 0; j < v[0].size(); j++) {
+            if(v[i][j] == '1') {
+                nw->set(i, j, 1);
+            }else {
+                nw->set(i, j, 0);
+            }
+        }
+    }
+    return nw;
 }

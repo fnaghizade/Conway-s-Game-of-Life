@@ -15,5 +15,5 @@ public:
     int get(int, int);
     int countNeighbors(int x, int y);
     int** newWorld();
-    void readFromFile(string);
+    world *readFromFile(string);
 };
