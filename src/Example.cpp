@@ -3,7 +3,7 @@
 using namespace std; 
 
 
-int countNeighbors(std::vector<std::vector<bool>> &grid, int x , int y)
+int countNeighbors(vector<vector<bool>> &grid, int x , int y)
 {
     int alive = 0;
     // testing top
@@ -33,9 +33,9 @@ int countNeighbors(std::vector<std::vector<bool>> &grid, int x , int y)
 }
 
 
-std::vector<std::vector<bool>> newGrid(std::vector<std::vector<bool>> &grid)
+vector<vector<bool>> newGrid(vector<vector<bool>> &grid)
 {
-    std::vector<std::vector<bool>> a = grid;
+    vector<vector<bool>> a = grid;
     for(int x = 0; x < grid.size(); x++){
         for(int y = 0; y < grid[0].size(); y++){
                 
@@ -53,7 +53,7 @@ std::vector<std::vector<bool>> newGrid(std::vector<std::vector<bool>> &grid)
 }
 
 
-void print(std::vector<std::vector<bool>> &grid)
+void print(vector<vector<bool>> &grid)
 {
     for(int x = 0; x < grid.size(); x++){
         for(int y = 0; y < grid[0].size(); y++){
@@ -71,7 +71,7 @@ void print(std::vector<std::vector<bool>> &grid)
 int main() 
 
 { 
-    std::vector<std::vector<bool>> a = {{false, true, false, false, false, false, false, false, false, false, false, false, false, false, false},
+    vector<vector<bool>> a = {{false, true, false, false, false, false, false, false, false, false, false, false, false, false, false},
                                         {false, false, true, false, false, false, false, false, false, false, false, false, false, false, false},
                                         {true, true, true, false, false, false, false, false, false, false, false, false, false, false, false},
                                         {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false},
@@ -95,7 +95,7 @@ int main()
                                         {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false}};
 
 
-    std::vector<std::vector<bool>> new_grid = newGrid(a);
+    vector<vector<bool>> new_grid = newGrid(a);
     for(int i=0; i<10; i++){
 
         print(new_grid);
