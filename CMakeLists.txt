@@ -1,2 +1,2 @@
-project(asd)
-add_executable(asd src/Example.cpp)
+project(game)
+add_executable(game src/Example.cpp)

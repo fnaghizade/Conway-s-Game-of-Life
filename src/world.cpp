@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <bits/stdc++.h>
 using namespace std; 
 void world::set(int x, int y, int v) {
     world::grid[x][y] = v;
@@ -73,9 +74,10 @@ void world::print()
     cout <<"**************************************************" << endl;
 }
 void world::readFromFile(string filename) {
-    string myText;
+    string l;
     ifstream MyReadFile(filename);
-    while (getline (MyReadFile, myText)) {
-        cout << myText;
+    int W = 0;
+    while (getline (MyReadFile, l)) {
+        W = l.size();
     }
 }
